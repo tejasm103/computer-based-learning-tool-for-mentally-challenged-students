@@ -1,0 +1,266 @@
+/**
+ * accessibility.css - Specialized Accommodations & Assistive Modes
+ * Implements WCAG 2.1 AAA High Contrast, Sensory-Calm Mode, Font Scaling,
+ * and Dyslexia-Friendly Typography.
+ */
+
+/* ==========================================================================
+   1. FONT SIZE SCALING
+   ========================================================================== */
+body.font-normal {
+    font-size: 17px;
+}
+
+body.font-large {
+    font-size: 21px;
+}
+
+body.font-xlarge {
+    font-size: 25px;
+}
+
+body.font-xlarge .btn {
+    font-size: 1.35rem;
+    padding: 18px 36px;
+    min-height: 64px;
+}
+
+body.font-xlarge .aac-card-label {
+    font-size: 1.4rem;
+}
+
+/* ==========================================================================
+   2. DYSLEXIA-FRIENDLY TYPOGRAPHY
+   ========================================================================== */
+body.font-dyslexic {
+    font-family: 'Comic Neue', 'Comic Sans MS', 'Trebuchet MS', sans-serif !important;
+    letter-spacing: 0.06em !important;
+    word-spacing: 0.12em !important;
+    line-height: 1.8 !important;
+}
+
+body.font-dyslexic p,
+body.font-dyslexic span,
+body.font-dyslexic h1,
+body.font-dyslexic h2,
+body.font-dyslexic h3,
+body.font-dyslexic button {
+    font-family: inherit !important;
+    letter-spacing: inherit !important;
+    word-spacing: inherit !important;
+}
+
+/* ==========================================================================
+   3. HIGH CONTRAST THEME (WCAG 2.1 AAA Compliant - Yellow on Black)
+   ========================================================================== */
+body.theme-high-contrast {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+body.theme-high-contrast .app-header,
+body.theme-high-contrast .app-nav {
+    background: #000000 !important;
+    border-color: #ffeb3b !important;
+}
+
+body.theme-high-contrast .brand-title {
+    color: #ffeb3b !important;
+}
+
+body.theme-high-contrast .brand-tagline {
+    color: #ffffff !important;
+}
+
+body.theme-high-contrast .brand-icon {
+    background: #1a1a1a !important;
+    border-color: #ffeb3b !important;
+}
+
+body.theme-high-contrast .star-counter-badge {
+    background: #000000 !important;
+    border-color: #ffeb3b !important;
+    color: #ffeb3b !important;
+}
+
+body.theme-high-contrast .nav-btn {
+    background: #121212 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+}
+
+body.theme-high-contrast .nav-btn.active {
+    background: #ffeb3b !important;
+    color: #000000 !important;
+    border-color: #ffeb3b !important;
+    font-weight: 900 !important;
+}
+
+body.theme-high-contrast .hub-card,
+body.theme-high-contrast .sentence-strip-container,
+body.theme-high-contrast .aac-card,
+body.theme-high-contrast .emotion-explore-card,
+body.theme-high-contrast .scenario-card,
+body.theme-high-contrast .routine-banner,
+body.theme-high-contrast .available-steps-pool,
+body.theme-high-contrast .step-choice-card,
+body.theme-high-contrast .matching-prompt-card,
+body.theme-high-contrast .match-choice-btn,
+body.theme-high-contrast .counting-banner,
+body.theme-high-contrast .counting-playfield,
+body.theme-high-contrast .counting-item-btn,
+body.theme-high-contrast .dashboard-header,
+body.theme-high-contrast .metric-card,
+body.theme-high-contrast .pedagogical-tips-card,
+body.theme-high-contrast .modal-dialog {
+    background: #121212 !important;
+    border: 3px solid #ffeb3b !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+body.theme-high-contrast .welcome-banner {
+    background: #121212 !important;
+    border: 4px solid #ffeb3b !important;
+    color: #ffffff !important;
+}
+
+body.theme-high-contrast .btn-primary {
+    background: #ffeb3b !important;
+    color: #000000 !important;
+    border: 2px solid #ffffff !important;
+    font-weight: 900 !important;
+}
+
+body.theme-high-contrast .btn-secondary {
+    background: #262626 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+}
+
+body.theme-high-contrast .btn-speak {
+    background: #00e676 !important;
+    color: #000000 !important;
+    border: 2px solid #ffffff !important;
+    font-weight: 900 !important;
+}
+
+body.theme-high-contrast .icon-button,
+body.theme-high-contrast .speak-btn-mini {
+    background: #121212 !important;
+    border-color: #ffeb3b !important;
+    color: #ffeb3b !important;
+}
+
+body.theme-high-contrast .sentence-strip {
+    background: #1a1a1a !important;
+    border-color: #ffeb3b !important;
+}
+
+body.theme-high-contrast .strip-item {
+    background: #000000 !important;
+    border-color: #00ffff !important;
+    color: #00ffff !important;
+}
+
+body.theme-high-contrast .instructions-banner,
+body.theme-high-contrast .scenario-story {
+    background: #1a1a1a !important;
+    border-color: #ffeb3b !important;
+    color: #ffffff !important;
+}
+
+body.theme-high-contrast .timeline-slot {
+    background: #1a1a1a !important;
+    border-color: #ffffff !important;
+}
+
+body.theme-high-contrast .timeline-slot.slot-filled {
+    background: #004d40 !important;
+    border-color: #00e676 !important;
+}
+
+body.theme-high-contrast .count-number-big {
+    color: #ffeb3b !important;
+}
+
+body.theme-high-contrast h1,
+body.theme-high-contrast h2,
+body.theme-high-contrast h3,
+body.theme-high-contrast h4 {
+    color: #ffeb3b !important;
+}
+
+body.theme-high-contrast p,
+body.theme-high-contrast span {
+    color: #ffffff !important;
+}
+
+/* ==========================================================================
+   4. SENSORY-CALM MODE (Soft Pastels, Low Saturation, Non-Glaring)
+   ========================================================================== */
+body.theme-calm {
+    background-color: #f5f3ef !important;
+    color: #3b3a36 !important;
+}
+
+body.theme-calm .welcome-banner {
+    background: linear-gradient(135deg, #7c9473 0%, #9cb894 100%) !important;
+    color: #ffffff !important;
+}
+
+body.theme-calm .app-header,
+body.theme-calm .app-nav {
+    background: #ffffff !important;
+    border-color: #e5e0d8 !important;
+}
+
+body.theme-calm .hub-card,
+body.theme-calm .sentence-strip-container,
+body.theme-calm .aac-card,
+body.theme-calm .emotion-explore-card,
+body.theme-calm .scenario-card,
+body.theme-calm .routine-banner,
+body.theme-calm .available-steps-pool,
+body.theme-calm .matching-prompt-card,
+body.theme-calm .counting-banner,
+body.theme-calm .counting-playfield,
+body.theme-calm .dashboard-header,
+body.theme-calm .pedagogical-tips-card {
+    background: #ffffff !important;
+    border-color: #ded9cf !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+}
+
+body.theme-calm .btn-primary {
+    background: #7c9473 !important;
+    color: #ffffff !important;
+    border-color: #647b5c !important;
+}
+
+body.theme-calm .nav-btn.active {
+    background: #7c9473 !important;
+    border-color: #647b5c !important;
+}
+
+/* ==========================================================================
+   5. FOCUS & KEYBOARD NAVIGATION ACCESSIBILITY
+   ========================================================================== */
+*:focus-visible {
+    outline: 4px solid #ff9f43 !important;
+    outline-offset: 3px !important;
+}
+
+body.theme-high-contrast *:focus-visible {
+    outline: 5px solid #00ffff !important;
+    outline-offset: 4px !important;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

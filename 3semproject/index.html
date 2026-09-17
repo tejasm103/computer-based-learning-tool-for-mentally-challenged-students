@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindSpark - Computer-Based Learning & Communication Tool</title>
+    <meta name="description" content="An accessible, multi-sensory computer-based learning tool designed for students with intellectual disabilities, autism, and special learning needs.">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+</head>
+<body class="font-large">
+
+    <!-- Header & Top Navigation Bar -->
+    <header class="app-header" role="banner">
+        <div class="header-container">
+            <!-- Brand & Mascot -->
+            <div class="brand-wrapper" id="brandHomeTrigger" tabindex="0" role="button" aria-label="MindSpark Home">
+                <div class="brand-icon">🌟</div>
+                <div>
+                    <h1 class="brand-title">MindSpark</h1>
+                    <span class="brand-tagline">Learn • Talk • Grow</span>
+                </div>
+            </div>
+
+            <!-- Star Rewards Counter & Quick Settings -->
+            <div class="header-actions">
+                <div class="star-counter-badge" title="Stars Earned" aria-label="Total Stars Earned">
+                    <span class="star-icon">⭐</span>
+                    <span id="globalStarCount">0</span>
+                </div>
+
+                <button class="icon-button active" id="btnQuickVoice" title="Voice Speech: ON" aria-label="Toggle Voice Guidance">
+                    🔊
+                </button>
+
+                <button class="icon-button" id="btnOpenSettings" title="Accessibility & Educator Settings" aria-label="Open Accessibility and Educator Settings">
+                    ⚙️
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="app-nav" role="navigation" aria-label="Primary Learning Navigation">
+        <div class="nav-container">
+            <button class="nav-btn active" data-view="home" aria-label="Home Dashboard">
+                <span>🏠</span> Home
+            </button>
+            <button class="nav-btn" data-view="aac" aria-label="AAC Communication Board">
+                <span>🗣️</span> Talk (AAC)
+            </button>
+            <button class="nav-btn" data-view="emotions" aria-label="Emotions and Feelings">
+                <span>😊</span> Feelings
+            </button>
+            <button class="nav-btn" data-view="routines" aria-label="Daily Life Routines">
+                <span>🪥</span> Daily Routines
+            </button>
+            <button class="nav-btn" data-view="matching" aria-label="Shapes and Colors Matching">
+                <span>🔺</span> Shapes & Colors
+            </button>
+            <button class="nav-btn" data-view="counting" aria-label="Counting Game">
+                <span>⭐</span> Counting
+            </button>
+            <button class="nav-btn" data-view="dashboard" aria-label="Educator Progress Tracker">
+                <span>📊</span> Progress
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Dynamic Content Workspace -->
+    <main class="app-main" id="mainContent" role="main">
+        <!-- Views are rendered dynamically by app.js and modules -->
+    </main>
+
+    <!-- Settings & Accessibility Modal -->
+    <div class="modal-backdrop" id="settingsModal" role="dialog" aria-modal="true" aria-labelledby="settingsModalTitle">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3 id="settingsModalTitle">Accessibility & Educator Settings</h3>
+                <button class="modal-close-btn" id="btnCloseSettings" aria-label="Close Settings">✕</button>
+            </div>
+            <div class="modal-body">
+                <!-- Visual Theme -->
+                <div class="setting-group">
+                    <label for="settingTheme">Visual Display Theme:</label>
+                    <select id="settingTheme">
+                        <option value="standard">Standard (Friendly & Colorful)</option>
+                        <option value="high-contrast">High Contrast (Yellow on Black - WCAG AAA)</option>
+                        <option value="calm">Calm Sensory (Soft Pastel / Reduced Glare)</option>
+                    </select>
+                </div>
+
+                <!-- Font Size -->
+                <div class="setting-group">
+                    <label for="settingFontSize">Text Size:</label>
+                    <select id="settingFontSize">
+                        <option value="normal">Normal (17px)</option>
+                        <option value="large" selected>Large (21px - Recommended)</option>
+                        <option value="xlarge">Extra Large (25px)</option>
+                    </select>
+                </div>
+
+                <!-- Dyslexia Font Toggle -->
+                <div class="setting-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="settingDyslexia">
+                        <span>Enable Dyslexia-Friendly Letter Spacing</span>
+                    </label>
+                </div>
+
+                <!-- Speech Narration Speed -->
+                <div class="setting-group">
+                    <label for="settingSpeechRate">Voice Narration Speed:</label>
+                    <div class="speech-rate-row">
+                        <input type="range" id="settingSpeechRate" min="0.5" max="1.2" step="0.05" value="0.85">
+                        <span class="rate-badge" id="speechRateDisplay">0.85x</span>
+                        <button class="btn btn-secondary" id="btnTestVoice" style="min-height: 40px; padding: 6px 16px; font-size: 0.95rem;">Test Voice</button>
+                    </div>
+                    <small style="color: var(--text-muted);">Slower speech allows better cognitive processing time.</small>
+                </div>
+
+                <!-- Audio Cues & Sound Effects -->
+                <div class="setting-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="settingSound" checked>
+                        <span>Enable Gentle Chimes & Musical Sounds</span>
+                    </label>
+                </div>
+
+                <div class="setting-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="settingSpeech" checked>
+                        <span>Enable Spoken Narration (Web Speech)</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Scripts -->
+    <script src="js/sound.js"></script>
+    <script src="js/speech.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/modules/aac.js"></script>
+    <script src="js/modules/emotions.js"></script>
+    <script src="js/modules/routines.js"></script>
+    <script src="js/modules/matching.js"></script>
+    <script src="js/modules/counting.js"></script>
+    <script src="js/app.js"></script>
+    
+    <script>
+        // Clicking brand logo navigates home
+        document.getElementById('brandHomeTrigger').addEventListener('click', () => {
+            if (window.app) window.app.renderView('home');
+        });
+        document.getElementById('brandHomeTrigger').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                if (window.app) window.app.renderView('home');
+            }
+        });
+    </script>
+</body>
+</html>
